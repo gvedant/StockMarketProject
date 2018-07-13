@@ -1,2 +1,0 @@
-# StockMarketProject
-Created with CodeSandbox
