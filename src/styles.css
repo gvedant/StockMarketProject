@@ -12,9 +12,39 @@ html {
 }
 
 .SearchBar {
+  border: 2px solid #006994;
+  border-radius: 5px;
+  height: 35px;
+  width: 465px;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+  font-size: 20px;
+  color: #006994;
   margin-bottom: 10px;
+  outline: none;
 }
 
 .TimeInterval {
+  border: 2px solid #006994;
+  border-radius: 5px;
+  height: 35px;
+  width: 465px;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+  font-size: 20px;
+  color: #006994;
   margin-bottom: 10px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.Submit {
+  background-color: #006994;
+  border: 2px solid #006994;
+  border-radius: 1px;
+  height: 35px;
+  width: 265px;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+  outline: none;
 }

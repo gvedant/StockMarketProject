@@ -19,8 +19,11 @@ export class MainPage extends React.Component {
   }
 
   handleEvent(e) {
+    if (document.forms[0].timeInterval.value != "Choose Time Interval") {
+
     const symbol = e.target.querySelector('input[type="text"]').value;
     const timeInterval = document.forms[0].timeInterval.value;
+    console.log(timeInterval);
     const apiKey = "X1I0QHQDP5R5GEXA";
     let url;
     if (!timeInterval.includes("min")) {
@@ -52,18 +55,19 @@ export class MainPage extends React.Component {
           volume: stockInfo["5. volume"]
         });
       });
+    }
   }
 
   render() {
 
     const searchSymbol = (
       <form id="stock ticker search" action="#" onSubmit={this.handleEvent}>
-        <div className="SearchBar" align="top">
-          <input type="text" placeholder="Search Stock Ticker" />
+        <div align="top">
+          <input className="SearchBar" type="text" placeholder="Search Stock Ticker" />
         </div>
-        <div className="TimeInterval" align="bottom">
-          <select id="timeInterval">
-            <option selected disabled>Choose Time Interval</option>
+        <div align="bottom">
+          <select className="TimeInterval" id="timeInterval">
+            <option disabled="disabled" selected="selected">Choose Time Interval</option>
             <option value="1min">1 minute</option>
             <option value="5min">2 minutes</option>
             <option value="15min">15 minutes</option>
@@ -72,7 +76,7 @@ export class MainPage extends React.Component {
             <option value="Daily">Daily</option>
           </select>
         </div>
-        <input type="Submit" />
+        <input className="Submit" type="Submit" />
       </form>
     )
 
